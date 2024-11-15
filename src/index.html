@@ -5,25 +5,289 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
     <title>tailwind css</title>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu,rocket_launch"
+    />
   </head>
   <body class="font-poppins bg-body text-white">
     <!-- navigation bar -->
-    <header class="p-6 bg-blue-500">
-      <div class="container mx-auto flex">
-        <div>HiroCode.com</div>
-        <div>
-          <a href="#home">home</a>
-          <a href="#portfolio">portfolio</a>
-          <a href="#customer">customer</a>
-          <a href="#contact"><button>contact</button></a>
+    <header class="p-10">
+      <div
+        class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full"
+      >
+        <div class="text-lg font-bold">HiroCode.com</div>
+        <div class="space-x-10 hidden md:flex items-center">
+          <a
+            href="#home"
+            class="hover:text-selected-text transition-all duration-300"
+            >home</a
+          >
+          <a
+            href="#portfolio"
+            class="hover:text-selected-text transition-all duration-300"
+            >portfolio</a
+          >
+          <a
+            href="#skills"
+            class="hover:text-selected-text transition-all duration-300"
+            >skills</a
+          >
+          <a href="#contact">
+            <button
+              class="px-6 py-2 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
+            >
+              contact
+            </button></a
+          >
+        </div>
+        <div class="md:hidden">
+          <span class="material-symbols-outlined"> menu </span>
         </div>
       </div>
     </header>
+
+    <!-- hero section -->
+    <div
+      id="home"
+      class="container mt-16 items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+    >
+      <div class="flex flex-wrap md:flex-nowrap justify-center">
+        <div
+          class="md:my-36 lg:ml-20 md:flex-none flex justify-center flex-col md:justify-start mx-auto max-w-lg"
+        >
+          <h1 class="font-bold md:text-left text-center text-4xl md:text-6xl">
+            TailWindCSSで <br />
+            サイトをデザイン <br />
+            してみます
+          </h1>
+          <div class="flex md:justify-start justify-center">
+            <button
+              class="px-5 py-2 mt-10 flex justify-center bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
+            >
+              <span class="material-symbols-outlined pr-2">
+                rocket_launch
+              </span>
+              <span>more</span>
+            </button>
+          </div>
+        </div>
+        <img
+          class="md:absolute opacity-80 top-2 right-52 md:w-3/5 w-10/12 mt-12 md:mt-0 mx-auto -z-10"
+          src="./img/img-tokyo.jpg"
+          alt="img"
+        />
+      </div>
+    </div>
+
+    <!-- portfolio section -->
+    <div
+      id="portfolio"
+      class="container flex justify-between items-center mx-auto px-8 md:px-14 pt-10 lg:px-24 w-full bg-body"
+    >
+      <section class="w-full">
+        <div class="py-10">
+          <h2 class="secondary-title">my first TailWindCSS</h2>
+          <p class="section-paragraph">私の初めてのTailWindCSSです</p>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+          <img
+            src="./img/img-programming1.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+          <img
+            src="./img/img-programming2.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+          <img
+            src="./img/img-programming3.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+          <img
+            src="./img/img-programming4.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+          <img
+            src="./img/img-programming5.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+          <img
+            src="./img/img-programming6.jpg"
+            alt=""
+            class="w-full h-36 lg:h-72 object-cover rounded-md cursor-pointer"
+          />
+        </div>
+      </section>
+    </div>
+    <!-- skill stack -->
+    <div
+      id="skills"
+      class="container mt-30 flex justify-between items-center mx-auto px-8 md:px-14 pt-10 lg:px-24 w-full bg-body"
+    >
+      <section class="w-full">
+        <div class="pt-10">
+          <h2 class="secondary-title">skill stack</h2>
+          <p class="section-paragraph">スキル一覧です</p>
+        </div>
+
+        <!-- js -->
+        <div class="my-16">
+          <div
+            class="w-full border border-purple-300 p-16 lg:px-16 lg:py-20 flex lg:justify-start justify-center flex-wrap lg:space-x-32 hover:border-yellow-300 transition-all duration-300 cursor-pointer"
+          >
+            <div class="mb-6 lg:mb-0 self-center">
+              <i class="fa-brands fa-js-square text-9xl text-yellow-300"></i>
+            </div>
+            <div
+              class="text-center flex flex-wrap justify-center lg:text-left lg:block"
+            >
+              <h3 class="text-3xl font-semibold">Javascript</h3>
+              <div
+                class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8"
+              >
+                <div class="badge">ウェブ制作</div>
+                <div class="badge">フロントエンド開発</div>
+              </div>
+              <p class="text-secondary">Javascriptエンジニア</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- React -->
+        <div class="my-16">
+          <div
+            class="w-full border border-purple-300 p-16 lg:px-16 lg:py-20 flex lg:justify-start justify-center flex-wrap lg:space-x-32 hover:border-blue-400 transition-all duration-300 cursor-pointer"
+          >
+            <div class="mb-6 lg:mb-0 self-center">
+              <i class="fa-brands fa-react text-9xl text-blue-400"></i>
+            </div>
+            <div
+              class="text-center flex flex-wrap justify-center lg:text-left lg:block"
+            >
+              <h3 class="text-3xl font-semibold">React</h3>
+              <div
+                class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8"
+              >
+                <div class="badge">ウェブ制作</div>
+                <div class="badge">フロントエンド開発</div>
+              </div>
+              <p class="text-secondary">Reactエンジニア</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="my-16">
+          <div
+            class="w-full border border-purple-300 p-16 lg:px-16 lg:py-20 flex lg:justify-start justify-center flex-wrap lg:space-x-32 hover:border-blue-600 transition-all duration-300 cursor-pointer"
+          >
+            <div class="mb-6 lg:mb-0 self-center">
+              <i class="fa-brands fa-python text-9xl text-blue-600"></i>
+            </div>
+            <div
+              class="text-center flex flex-wrap justify-center lg:text-left lg:block"
+            >
+              <h3 class="text-3xl font-semibold">Python</h3>
+              <div
+                class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mt-6 mb-8"
+              >
+                <div class="badge">ウェブ制作</div>
+                <div class="badge">バックエンド開発</div>
+              </div>
+              <p class="text-secondary">Pythonエンジニア</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- contact -->
+    <div
+      id="contact"
+      class="mb-20 container mt-52 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
+    >
+      <section class="w-full">
+        <h2 class="secondary-title">contact</h2>
+        <p class="section-paragraph">お問い合わせはこちら</p>
+        <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-16">
+          <div class="space-y-12">
+            <div>
+              <label class="text-white block mb-6 text-xl font-semibold"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="w-full border border-inputBorder bg-input p-4"
+              />
+            </div>
+
+            <div>
+              <label
+                type="email"
+                class="text-white block mb-6 text-xl font-semibold"
+                >Email</label
+              >
+              <input
+                type="text"
+                class="w-full border border-inputBorder bg-input p-4"
+              />
+            </div>
+
+            <div>
+              <label class="text-white block mb-6 text-xl font-semibold"
+                >Message</label
+              >
+              <input
+                type="text"
+                class="w-full border border-inputBorder bg-input p-4"
+              />
+            </div>
+            <button
+              class="px-6 py-2 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300"
+            >
+              送信する
+            </button>
+          </div>
+
+          <div>
+            <p class="text-secondary">000-1111-2222</p>
+            <a href="mailto:888.tmp@gmail.com">888.tmp@gmail.com</a>
+            <!-- sns -->
+            <div class="mt-20 space-x-6">
+              <a href="#">
+                <i class="fa-brands fa-twitter text-3xl text-blue-400"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-facebook text-3xl text-blue-600"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-instagram text-3xl text-pink-600"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
